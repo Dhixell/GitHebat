@@ -23,13 +23,3 @@ Program ini merupakan hasil refactoring dari Modul 2, yang mengimplementasikan *
 | **SistemPemesananOnlineShop** | Kelas utama yang menjalankan program |
 
 ---
-
-## ⚙ Cara Menjalankan Program
-
-1. Pastikan sudah menginstal **JDK 17** atau lebih baru.
-2. Simpan semua file `.java` dalam satu folder.
-3. Jalankan perintah berikut di terminal:
-
-   ```bash
-   javac SistemPemesananOnlineShop.java
-   java SistemPemesananOnlineShop
