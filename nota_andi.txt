@@ -1,15 +1,12 @@
 === NOTA PEMESANAN ONLINE SHOP ===
-Tanggal : 27-10-2025 00:27:31
-Nama Customer : Andi
-Alamat : Jl. Merdeka No. 5
-Nomor : 08123456789
--------------------------------
-Barang : Kemeja Batik
-Harga Satuan : Rp 200000.0
-Jumlah : 3
-Subtotal : Rp 600000.0
-Diskon (10%) : Rp 60000.0
-Pajak (11%) : Rp 59400.0
-Total Bayar : Rp 599400.0
-===============================
-Terima kasih telah berbelanja di Online Shop kami!
+Tanggal : 27-10-2025 10-39-31
+Nama    : Andi
+Alamat  : Jl. Merdeka No. 5
+Telepon : 08123456789
+
+Barang  : Kemeja Batik
+Harga   : Rp 200000.0
+Jumlah  : 3
+Total   : Rp 599400.0
+==============================
+Terima kasih telah berbelanja!
