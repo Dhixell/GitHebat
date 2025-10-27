@@ -42,3 +42,4 @@ Setelah itu, nota disimpan ke dalam file teks .txt melalui method simpanNota().
 | Total Akhir | `(subtotal - diskon) + pajak` | Total keseluruhan yang harus dibayar |
 
 selesai
+tets
