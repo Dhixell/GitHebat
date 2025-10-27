@@ -3,38 +3,91 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+/**
+ * Program Sistem Pemesanan Online Shop versi sederhana.
+ * <p>
+ * Fitur:
+ * <ul>
+ *   <li>Menampilkan nota pemesanan</li>
+ *   <li>Menghitung diskon dan pajak otomatis</li>
+ *   <li>Menyimpan nota ke file .txt</li>
+ * </ul>
+ *
+ * @author
+ * @version 1.0
+ * @since 2025-10-27
+ */
 public class SistemPemesananOnlineShop {
 
-    // ====== Data Barang dan Pelanggan ======
+    /**
+     * Kelas untuk merepresentasikan barang yang dipesan.
+     */
     static class Item {
         String nama;
         double harga;
         int jumlah;
 
+        /** Persentase diskon */
         static final double DISKON = 0.1;
+
+        /** Persentase pajak */
         static final double PAJAK = 0.11;
 
+        /**
+         * Konstruktor untuk membuat objek Item.
+         *
+         * @param nama   nama barang
+         * @param harga  harga satuan barang
+         * @param jumlah jumlah barang yang dibeli
+         */
         Item(String nama, double harga, int jumlah) {
             this.nama = nama;
             this.harga = harga;
             this.jumlah = jumlah;
         }
 
-        double total() { return harga * jumlah; }
+        /**
+         * Menghitung total harga sebelum diskon dan pajak.
+         *
+         * @return total harga
+         */
+        double total() {
+            return harga * jumlah;
+        }
 
+        /**
+         * Menghitung total harga setelah diskon 10%.
+         *
+         * @return total harga setelah diskon
+         */
         double totalSetelahDiskon() {
             return total() - (total() * DISKON);
         }
 
+        /**
+         * Menghitung total harga akhir setelah diskon dan pajak.
+         *
+         * @return total harga akhir
+         */
         double totalAkhir() {
             double setelahDiskon = totalSetelahDiskon();
             return setelahDiskon + (setelahDiskon * PAJAK);
         }
     }
 
+    /**
+     * Kelas untuk menyimpan data pelanggan.
+     */
     static class Customer {
         String nama, alamat, telp;
 
+        /**
+         * Konstruktor Customer.
+         *
+         * @param nama   nama pelanggan
+         * @param alamat alamat pelanggan
+         * @param telp   nomor telepon pelanggan
+         */
         Customer(String nama, String alamat, String telp) {
             this.nama = nama;
             this.alamat = alamat;
@@ -42,7 +95,12 @@ public class SistemPemesananOnlineShop {
         }
     }
 
-    // ====== Fitur Menampilkan dan Menyimpan Nota ======
+    /**
+     * Menampilkan nota pemesanan ke layar.
+     *
+     * @param item barang yang dipesan
+     * @param c    data pelanggan
+     */
     static void tampilkanNota(Item item, Customer c) {
         DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
         String waktu = LocalDateTime.now().format(fmt);
@@ -63,6 +121,12 @@ public class SistemPemesananOnlineShop {
         System.out.println("==============================");
     }
 
+    /**
+     * Menyimpan nota pemesanan ke dalam file teks (.txt).
+     *
+     * @param item barang yang dipesan
+     * @param c    data pelanggan
+     */
     static void simpanNota(Item item, Customer c) {
         DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd-MM-yyyy HH-mm-ss");
         String waktu = LocalDateTime.now().format(fmt);
@@ -87,7 +151,11 @@ public class SistemPemesananOnlineShop {
         }
     }
 
-    // ====== Program Utama ======
+    /**
+     * Method utama untuk menjalankan program pemesanan.
+     *
+     * @param args argumen dari command line (tidak digunakan)
+     */
     public static void main(String[] args) {
         Item item = new Item("Kemeja Batik", 200000, 3);
         Customer c = new Customer("Andi", "Jl. Merdeka No. 5", "08123456789");
