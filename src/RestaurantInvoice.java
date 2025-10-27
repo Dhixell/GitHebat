@@ -86,6 +86,7 @@ public class RestaurantInvoice {
         System.out.printf("%-25s Rp %,10.0f%n", "Total Bayar", grandTotal);
         System.out.println("======================================");
         System.out.println("Terima kasih telah makan di Restoran Makmur!");
+
         input.close();
     }
 }

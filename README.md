@@ -40,3 +40,5 @@ Setelah itu, nota disimpan ke dalam file teks .txt melalui method simpanNota().
 | Diskon      | `subtotal × 0.1`              | Diskon sebesar 10%                   |
 | Pajak       | `(subtotal - diskon) × 0.11`  | Pajak sebesar 11% setelah diskon     |
 | Total Akhir | `(subtotal - diskon) + pajak` | Total keseluruhan yang harus dibayar |
+
+selesai
